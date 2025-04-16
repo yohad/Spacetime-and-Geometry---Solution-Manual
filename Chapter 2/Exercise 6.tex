@@ -1,0 +1,27 @@
+\subsection{Exercise 6}
+\subsubsection{a. Path of the curve}
+First we need the inverse transformations:
+\begin{align}
+    r &= x^2 + y^2 + z^2 \\
+    \phi &= \arctan{\frac{y}{x}} \\
+    \theta &= \arccos{\frac{z}{x^2 + y^2 + z^2}}
+\end{align}
+Plugging in the curve in $(x,y,z)$ we get:
+\begin{align}
+    r(\lambda) &= \lambda^2 + 1 \\
+    \phi(\lambda) &= \arctan{\tan{\lambda}} = \lambda \\
+    \theta(\lambda) &= \arccos{\frac{\lambda}{\lambda^2+1}}
+\end{align}
+\subsubsection{b. Tangent Vector}
+In Cartesian coordinates:
+\begin{align}
+    \frac{dx}{d\lambda} &= -\sin{\lambda} \\
+    \frac{dy}{d\lambda} &= \cos{\lambda} \\
+    \frac{dz}{d\lambda} &= 1
+\end{align}
+In spherical polar coordinates:
+\begin{align}
+    \frac{dr}{d\lambda} &= 2\lambda \\
+    \frac{d\phi}{d\lambda} &= 1 \\
+    \frac{d\theta}{d\lambda} &= \dfrac{{\lambda}^2-1}{\left({\lambda}^2+1\right)\sqrt{\left({\lambda}^2+1\right)^2-{\lambda}^2}}
+\end{align}

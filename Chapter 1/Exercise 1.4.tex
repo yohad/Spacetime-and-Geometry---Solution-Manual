@@ -1,0 +1,24 @@
+\subsection{Exercise 4}
+
+
+
+\includegraphics[scale=0.15]{Chapter 1/images/1_4.jpg}
+
+The observer is at $O$, the quasar is at $Q$, shooting gas toward $A$.
+
+Let $t_0$ be the time just as the gas started to eject. Then the observer at $O$, will see that at $t_0+D$ (where $c=1$ so $D$ is in units of time). After a time $T$, the jet has moved to point $A$. The observer will see that at $t_0+T+L$. Then the time difference is $\Delta t = (t_0+T+L)-(t_0+D)=T+L-D$. Using trigonometry we can find $L$:
+\begin{align}
+    L &= \sqrt{(D-Tv\cos{\theta})^2 + (Tv\sin{\theta})^2} \\
+    &= D\sqrt{1-2\frac{Tv}{D}\cos{\theta} + \left(\frac{tV}{D}\right)^2} \\
+    &\approx D - Tv\cos{\theta}
+\end{align}
+Where we used the fact that $Tv\ll D$. The time difference is then:
+\begin{equation}
+    \Delta t = T ( 1 - v\cos{\theta})
+\end{equation}
+
+The distance is $AB=Tv\sin{\theta}$, so the apparent velocity is:
+\begin{equation}
+    v_{app} = \frac{v\sin{\theta}}{1-v\cos{\theta}} 
+\end{equation}
+For $v=0.9,\theta=\frac{pi}{4}$, we get $v_{app}\approx1.75$.

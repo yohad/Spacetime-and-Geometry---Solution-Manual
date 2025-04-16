@@ -1,0 +1,32 @@
+\subsection{Exercise 9}
+We take "smoothing" to mean that $T_{\mu\nu}$  at a single point is equal to the average of $T_{\mu\nu}$ in a small volume around the point.
+\begin{align}
+    T_{\mu\nu} &= \frac{1}{\Delta V} \int_{\Delta V} T_{\mu\nu} d\boldsymbol{x} \\
+    &= \frac{1}{\Delta V} \int_{\Delta V} \sum_a\frac{p_\mu^{(a)}p_\nu^{(a)}}{p^{0(a)}} \delta^{(3)} (\boldsymbol{x}-\boldsymbol{x}^{(a)})d\boldsymbol{x} \\
+    &= \frac{1}{\Delta V} \sum_a \frac{p_\mu^{(a)}p_\nu^{(a)}}{p^{0(a)}} \int_{\Delta V} \delta^{(3)} (\boldsymbol{x}-\boldsymbol{x}^{(a)})d\boldsymbol{x} \\
+    &= \frac{1}{\Delta V} \sum_a \frac{p_\mu^{(a)}p_\nu^{(a)}}{p^{0(a)}}
+\end{align}
+We can now start calculating the elements of the tensor.
+\begin{equation}
+    T_{00} = \frac{1}{\Delta V} \sum_a p^{(a)}_0
+\end{equation}
+$p_0$ is the energy of the particle. So $T_{00}=\rho$, the energy density.
+\begin{equation}
+    T_{i0} = \frac{1}{\Delta V} \sum_a p^{(a)}_i
+\end{equation}
+From the assumption that the velocities are isotropically distributed and that the sum is over enough particles (that the dust is dense in this region) we see that $T_{i0}=0$
+\begin{equation}
+    T_{ij} =  \frac{1}{\Delta V} \sum_a \frac{p_i^{(a)}p_j^{(a)}}{p^{0(a)}}
+\end{equation}
+Looking at a single particle in the sum, we also write $\Delta V=dx^idx^kdx^l$.
+\begin{align}
+    \frac{1}{\Delta V} \frac{p_ip_j}{p^{0}} &= \frac{1}{dx^idx^kdx^l} \frac{m\frac{dx^i}{d\tau} m\frac{dx^j}{d\tau}}{m\frac{dx^0}{d\tau}} \\
+    &= \frac{dx^j}{dx^i} \frac{m}{dx^kdx^l} \frac{dx^i}{d\tau dx^0} \\
+    &= \delta_i^j \frac{m}{dx^kdx^l} \frac{dx^i}{d\tau dx^0}
+\end{align}
+We can see that $T_{ii}$ is the pressure (check the units) on a small area $dx^kdx^l$. But we assumed no favoured direction, so the pressure is the same.
+We can now write:
+\begin{equation}
+    T_{\mu\nu} = diag(\rho,p,p,p)
+\end{equation}
+which is the same as in 1.114.

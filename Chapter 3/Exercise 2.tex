@@ -1,0 +1,57 @@
+\subsection{Exercise 2}
+\subsubsection{Gradient}
+From assumption (4), the covariant derivative reduces to partial derivative on scalars. If $V$ is a scalar field then
+\begin{equation}
+    (\nabla V)_u = \nabla_u V = \partial_u V
+\end{equation}
+\subsubsection{Divergence}
+We can define the divergent of some vector $V^u$ as $\nabla_u V^u$ (or in a more mathematical correct way $g^{uv}\nabla_u V_v$). To use this definition we need to define the Christoffel symbols from the new metric. In Cartesian coordinates, the metric $g_{uv}$ is the $3\times3$ identity matrix. Following the tensor transformation rules:
+\begin{align}
+    g_{u'v'} &= \frac{\partial x^u}{\partial x^{u'}} \frac{\partial x^v}{\partial x^{v'}} g_{uv}
+\end{align}
+We can see that $g_{u'v'}$ is a diagonal matrix with components:
+\begin{align}
+    g_{rr} &= \left(\frac{\partial x}{\partial r}\right)^2 + \left(\frac{\partial y}{\partial r}\right)^2 + \left(\frac{\partial z}{\partial r}\right)^2 \\
+     &= \sin^2\theta \cos^2\phi + \sin^2\theta \sin^2 \phi + \cos^2\theta \\
+     &= 1
+\end{align}
+\begin{align}
+    g_{\theta\theta} &= \left(\frac{\partial x}{\partial \theta}\right)^2 + \left(\frac{\partial y}{\partial \theta}\right)^2 + \left(\frac{\partial z}{\partial \theta}\right)^2 \\
+    &= r^2 \cos^2\theta \cos^2\phi + r^2\cos^2\theta\sin^2\phi+r^2\sin^2\theta \\
+    &= r^2
+\end{align}
+\begin{align}
+    g_{\phi\phi} &= \left(\frac{\partial x}{\partial \phi}\right)^2 + \left(\frac{\partial y}{\partial \phi}\right)^2 + \left(\frac{\partial z}{\partial \phi}\right)^2 \\
+    &= r^2 \sin^2\theta \sin^2\phi +r^2 \sin^2\theta \cos^2\phi + 0 \\
+    &= r^2 \sin^2\theta
+\end{align}
+\begin{equation}
+    g_{u'v'} = \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & r^2 & 0 \\
+        0 & 0 & r^2\sin^2\theta
+    \end{bmatrix}
+\end{equation}
+We can write the divergent as:
+\begin{align}
+    g^{uv}\nabla_u V_v &= g^{rr} \nabla_r V_r + g^{\theta\theta}\nabla_\theta V_\theta + g^P\phi\phi\nabla_\phi V_\phi
+\end{align}
+\begin{align}
+    g^{rr}\nabla_r V_r &= \partial_r V_r + \Gamma^r_{rr}V_r + \Gamma^\theta_{rr} V_\theta + \Gamma^r\phi_{rr} V_\phi \\
+    &= \partial_r V_r + 0\cdot V_r + 0\cdot V_\theta + 0\cdot V_\phi \\ &= \partial_r V_r = \partial_r V^r
+\end{align}
+\begin{align}
+    g^{\theta\theta} \nabla_\theta V_\theta &= g^{\theta\theta} \left(\partial_\theta V_\theta + \Gamma^{r}_{\theta\theta}V_r + \Gamma^{\theta}_{\theta\theta}V_\theta + \Gamma^{\phi}_{\theta\theta}V_\phi\right) \\
+    &= g^{\theta\theta} \left(\partial_\theta V_\theta -r V_r + 0\cdot V_\theta + 0\cdot V_\phi\right) \\
+    &= \partial_\theta V^\theta - \frac{V^r}{r}
+\end{align}
+\begin{align}
+    g^{\phi\phi}\nabla_\phi V_\phi &= g^{\phi\phi}\left(\partial_\phi V_\phi + \Gamma^r_{\phi\phi} V_r + \Gamma^\theta_{\phi\phi}V_\theta + \Gamma^\phi_{\phi\phi} V_\phi \right) \\
+    &=g^{\phi\phi}\left(\partial_\phi V_\phi -r\sin^2\theta V_r -\sin\theta\cos\theta V_\theta + 0\cdot V_\phi \right) \\
+    &= \partial_\phi V^\phi - \frac{V^r}{r} - \frac{\cot{\theta}}{r^2} V_\theta \\
+    &= \partial_\phi V^\phi - \cot{\theta} V^\theta
+\end{align}
+We found that
+\begin{equation}
+    \nabla_u V^u = \partial_u V^u - \frac{2V^r}{r} - \cot{\theta V^\theta}
+\end{equation}

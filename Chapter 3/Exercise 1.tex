@@ -1,0 +1,16 @@
+\subsection{Exercise 1}
+We assume metric compatibility  $\nabla_\sigma g_{\mu\nu}=0$. First we want to prove that $\nabla_\sigma g^{\mu\nu}=0$.
+Remember property (1), that the covariant derivative commutes with contractions:
+\begin{align}
+    \nabla_\sigma g^{\mu\nu} &= (\nabla g)_{\sigma}{^{\mu\nu}} \\
+    &= g^{\mu\alpha} g^{\beta\nu} (\nabla g)_{\sigma\alpha\beta} \\
+    &= g^{\mu\alpha} g^{\beta\nu} \cdot 0 =0
+\end{align}
+
+Next, we want to show that $\nabla_\lambda \epsilon_{\mu\nu\rho\sigma}=0$. Because $\tilde{\epsilon}_{\mu\nu\rho\sigma}$ is a constant, we can write
+\begin{align}
+    \nabla_\lambda \epsilon_{\mu\nu\rho\sigma} &= \tilde{\epsilon}_{\mu\nu\rho\sigma}\nabla_\lambda \sqrt{|g|} \\
+    &= \tilde{\epsilon}_{\mu\nu\rho\sigma} \frac{1}{2\sqrt{|g|}}\nabla_\lambda |g|
+\end{align}
+Now, we $g$ is some sum of products of $g_{\mu\nu},g^{\mu\nu}$, from what we already showed we can conclude that  $\nabla_\lambda \epsilon_{\mu\nu\rho\sigma}=0$.
+

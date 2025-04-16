@@ -1,0 +1,62 @@
+\subsection{Exercise 1}
+In this exercise we'll revisit velocity addition in special relativity. Let $S$ be some inertial frame and $S'$ be a frame whose related to $S$ by a boost with a velocity parameter of $v$ along the $y$ axis.  Think about a particle moving in $S'$ with velocity of $v^i=(v_x,v_y,v_z)$. What is the velocity of the particle in $S$?
+
+In $S'$, the four-position of the particle is
+\begin{equation}
+    x^{\mu'} = \begin{bmatrix}
+        t \\
+        x_0 + v_x t \\
+        y_0 + v_y t \\
+        z_0 + v_z t
+    \end{bmatrix}
+\end{equation}
+Using equation 1.19 we can use the relation $\gamma' d\tau' = dx^{0'}$, where $\gamma'=\frac{1}{\sqrt{1-(v_x^2+v_y^2+v_z^2)}}$, to find the four-velocity:
+\begin{equation}
+    V^{\mu'} = \gamma' \begin{bmatrix}
+        1 \\ v_x \\ v_y \\ v_z
+    \end{bmatrix}
+\end{equation}
+We can check that it is normalized:
+\begin{equation}
+    \eta_{\mu'\nu'} V^{\mu'}V^{\nu'} = (\gamma')^2 (-1 + v_x^2 +v_y^2+v_z^2) = -1
+\end{equation}
+
+$S$ is related to $S'$ by a boost with velocity parameter of $-v$ along the $y$ axis. The boost is then
+\begin{equation}
+    \Lambda^\mu_{\nu'} = \begin{bmatrix}
+        \gamma & 0 & \gamma v & 0 \\
+        0 & 1 & 0 & 0 \\
+        \gamma v & 0 & \gamma & 0 \\
+        0 & 0 & 0 & 1
+    \end{bmatrix}
+\end{equation}
+where $\gamma=\frac{1}{\sqrt{1-v^2}}$ The four-velocity in $S$ is then:
+\begin{equation}
+    V^\mu = \Lambda^\mu_{\nu'}V^{\nu'} = \gamma'\begin{bmatrix}
+        \gamma(1+vv_y) \\
+        v_x \\
+        \gamma (v+v_y) \\
+        v_z
+    \end{bmatrix}
+\end{equation}
+Now we now, from $V^0$ that $\frac{d\tau}{dx^0}=\frac{1}{V^0}$ and can find the velocity in $S$:
+\begin{align}
+    \frac{dx^1}{dx^0} &= \frac{dx^1}{d\tau}\frac{d\tau}{dx^0} = \frac{v_x}{\gamma (1+vv_y)} \\
+    \frac{dx^2}{dx^0} &= \frac{dx^2}{d\tau}\frac{d\tau}{dx^0} = \frac{v+v_y}{1+vv_y} \\
+    \frac{dx^3}{dx^0} &= \frac{dx^3}{d\tau}\frac{d\tau}{dx^0} = \frac{v_z}{\gamma (1+vv_y)}
+\end{align}
+Which are the known "velocity addition" rules in special relativity.
+
+Returning to the actual question of the bouncing ball, if the original velocity is $v_{b'}=(v_x,v_y,0)$ then after the bounce the velocity will be $v_{a'}=(v_y,v_x,0)$. Then, by our velocity addition rules we get
+\begin{align}
+    v_b &= \begin{bmatrix}
+        \frac{v_x}{\gamma (1+vv_y)} \\
+        \frac{v+v_y}{1+vv_y} \\
+        0
+    \end{bmatrix} \\
+    v_a &= \begin{bmatrix}
+        \frac{v_y}{\gamma (1+vv_x)} \\
+        \frac{v+v_x}{1+vv_x} \\
+        0
+    \end{bmatrix}
+\end{align}

@@ -1,0 +1,46 @@
+\subsection{Exercise 4}
+\subsubsection{Linearity}
+Here, we remember that vector fields define a linear operator, and then
+\begin{align}
+    [X,Y](af+bg)&=X(Y(af+bg))-Y(X(af+bg)) \\
+    &= X(aY(f)+bY(g)) - Y(aX(f)+bX(g)) \\
+    &= aX(Y(f))+bX(y(g)) - aY(X(f)) - b(Y(X(G)) \\
+    &= a[X,Y](f)+b[X,Y](g)
+\end{align}
+\subsubsection{Leibniz Rule}
+\begin{align}
+    [X,Y](fg) &= X(Y(fg)) - Y(X(FG)) \\
+    &= X(fY(g) + gY(f)) - Y(fX(g)+gX(f)) \\
+    &= X(f)Y(g) + fX(Y(g)) + X(g)Y(f) + gX(Y(f)) \\
+    &- Y(f)X(g) - fY(X(g)) - Y(g)X(f)-gY(X(f)) \\
+    &=fX(Y(g))- fY(X(g)) + gX(Y(f)) -gY(X(f)) \\
+    &= f[X,Y](g) + g[X,Y](f)
+\end{align}
+\subsubsection{Components Formula}
+We can see from 2.15 that if $X$ is a vector field, and $f:M \rightarrow \mathbf{R}$ is a smooth function, then
+\begin{equation}
+    X(f)=X^\lambda \partial_\lambda f
+\end{equation}
+Now, $Y(f)$ is also a smooth function so
+\begin{align}
+    X(Y(f)) &= X^\lambda \partial_\lambda (Y^\mu \partial_\mu f) \\
+    &= X^\lambda (\partial_\lambda Y^\mu)( \partial_\mu f) + X^\lambda  Y^\mu \partial_\lambda \partial_\mu f
+\end{align}
+Using this, we can find the components of the commutator (The second term cancels out).
+\begin{align}
+    [X,Y](f) &= X^\lambda (\partial_\lambda Y^\mu)( \partial_\mu f) - Y^\rho (\partial_\rho X^\sigma)( \partial_\sigma f)
+\end{align}
+We wish to find the $\mu$ component (a slight reuse of symbols is happening here).
+\begin{align}
+    [X,Y]^\mu &= X^\lambda \partial_\lambda Y^\mu - Y^\rho\partial_\rho X^\mu \\
+    &= X^\lambda \partial_\lambda Y^\mu - Y^\lambda\partial_\lambda X^\mu
+\end{align}
+where we notices that we can just sum everything together with $\lambda$.
+\subsubsection{Transformation as a Vector}
+First we notice that $X(f)$ is coordinate independent. Following the steps above, we can see that
+\begin{align}
+    [X,Y]^{\mu'} &= X^\lambda\partial_\lambda\left( \frac{\partial x^{\mu'}}{\partial x^\mu} Y^\mu\right) - Y^\lambda\partial_\lambda\left( \frac{\partial x^{\mu'}}{\partial x^\mu} X^\mu\right) \\
+    &= \frac{\partial x^{\mu'}}{\mu} \left(X^\lambda \partial_\lambda Y^\mu - Y^\lambda\partial_\lambda X^\mu \right) \\
+    &= \frac{\partial x^{\mu'}}{\mu} [X,Y]^\mu
+\end{align}
+

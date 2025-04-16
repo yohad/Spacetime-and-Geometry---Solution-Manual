@@ -1,0 +1,15 @@
+\subsection{Exercise 8}
+Let $\omega,\eta$ be $p$-form and $q$-form respectively.
+
+\begin{align}
+    (\mathrm{d}(\omega \wedge \eta))_{\mu_1 \cdots \mu_{p+q+1}} &= (p+q+1)\partial_{[\mu_1} (\omega \wedge \eta)_{\mu_2\cdots\mu_{p+q+1}]} \\
+    &= (p+q+1) \frac{(p+q)!}{p!q!}\partial_{[\mu_1} (\omega_{\mu_2\cdots \mu_{p+1}} \eta_{\mu_{p+2}\cdots\mu_{p+q+1}]}) \\
+    &= \frac{(p+q+1)!}{p!q!}\left((\partial_{[\mu_1}\omega_{\mu_2\cdots \mu_{p+1}})\eta_{\mu_{p+2}\cdots\mu_{p+q+1}]} + \omega_{[\mu_2 \cdots \mu_p+1} \partial_{\mu_1} \eta_{\mu_{p+2} \cdots \mu_{p+q+1}]}\right) \\
+    &= \frac{(p+q+1)!}{p!q!}\left((\partial_{[\mu_1}\omega_{\mu_2\cdots \mu_{p+1}})\eta_{\mu_{p+2}\cdots\mu_{p+q+1}]} + (-1)^p \omega_{[\mu_1 \cdots \mu_p} \partial_{\mu_{p+1}} \eta_{\mu_{p+2} \cdots \mu_{p+q+1}]}\right) \\
+    &= \frac{(p+q+1)!}{(p+1)!q!} ((p+1)\partial_{[\mu_1}\omega_{\mu_2\cdots \mu_{p+1}})\eta_{\mu_{p+2}\cdots\mu_{p+q+1}]} \\
+    &+ (-1)^p \frac{(p+q+1)!}{p!(q+1)!} \omega_{[\mu_1 \cdots \mu_p} (q+1)\partial_{p+1}\eta_{\mu_{p+1}\cdots\mu_{p+q+1}]}
+\end{align}
+Now, it is easy to see that
+\begin{equation}
+    \mathrm{d}(\omega\wedge\eta) = (\mathrm{d}\omega)\wedge\eta + (-1)^p\omega\wedge(\mathrm{d}\eta)
+\end{equation}

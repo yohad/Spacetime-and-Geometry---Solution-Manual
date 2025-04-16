@@ -1,0 +1,56 @@
+\subsection{Exercise 10}
+\begin{equation}
+    F_{\mu\nu} = \begin{bmatrix}
+        0 & -E_1 & -E_2 & -E_3 \\
+        E_1 & 0 & B_3 & -B_2 \\
+        E_2 & -B_3 & 0 & B_1 \\
+        E_3 & B_2 & -B_1 & 0
+    \end{bmatrix}
+\end{equation}
+\begin{equation}
+    F^{\mu\nu}=\eta^{\mu\sigma}\eta^{\nu\rho} F_{\rho \sigma}
+\end{equation}
+\begin{equation}
+    F_{\mu\nu} = \eta_{\mu\sigma} \eta_{\nu \rho} F^{\rho\sigma}
+\end{equation}
+\subsubsection{A rotation about the y-axis}
+\begin{equation}
+    \Lambda^{\mu'}{_\nu} = \begin{bmatrix}
+        1 &0 &0 &0 \\
+        0 & \cos\theta & 0 & \sin\theta \\
+        0 & 0 & 1 &0 \\
+        0 & -\sin\theta &0 & \cos\theta
+    \end{bmatrix}
+\end{equation}
+\begin{align}
+    F_{\mu'\nu'} &= \Lambda_{\mu'}{^\mu} \Lambda_{\nu'}{^\nu} F_{\mu\nu}
+\end{align}
+\begin{align}
+    F'_{00} = \Lambda_0{^\mu}\Lambda_0{^\nu}F_{\mu\nu} \\
+    &= \Lambda_0{^0} \Lambda_0{^0} F_{00} \\&= 0
+\end{align}
+\begin{align}
+    F'_{01} &= \Lambda_0{^\mu}\Lambda_1{^\nu}F_{\mu\nu} \\
+    &= \Lambda_0{^0}\Lambda_1{^1}F_{01} + \Lambda_0{^0}\Lambda_1{^3}F_{03}\\
+    &= -E_1\cos{\theta} - E_3 \sin{\theta}
+\end{align}
+\begin{align}
+    F'_{11} &= \Lambda_1{^\mu}\Lambda_1{^\nu}F_{\mu\nu} \\
+    &= \Lambda_1{^1}\Lambda_1{^1}F_{11} +\Lambda_1{^3}\Lambda_1{^1}F_{31} + \Lambda_1{^1}\Lambda_1{^3}F_{13} + \Lambda_1{^3}\Lambda_1{^3}F_{33} \\
+    &= \Lambda_1{^3}\Lambda_1{^1}F_{31} + \Lambda_1{^1}\Lambda_1{^3}F_{13}\\
+    &= \cos{\theta}\sin{\theta} (-B_3 +B_3) \\
+    &= 0
+\end{align}
+
+\begin{align}
+    F'_{12} &= \Lambda_1{^\mu}\Lambda_2{^\nu}F_{\mu\nu} \\
+    &= \Lambda_1{^1}\Lambda_2{^2}F_{12} + \Lambda_1{^3}\Lambda_2{^2}F_{32} \\
+    &= B_3 \cos{\theta} - B_1 \sin{\theta} 
+\end{align}
+\begin{align}
+    F'_{13} &= \Lambda_1{^\mu}\Lambda_3{^\nu}F_{\mu\nu} \\
+    &= \Lambda_1{^1}\Lambda_3{^1}F_{11} + \Lambda_1{^3}\Lambda_3{^1}F_{31} + \Lambda_1{^1}\Lambda_3{^3}F_{13} + \Lambda_1{^3}\Lambda_3{^3}F_{33}\\
+    &= \Lambda_1{^3}\Lambda_3{^1}F_{31} + \Lambda_1{^1}\Lambda_3{^3}F_{13} \\
+    &= -B_2 \sin^2{\theta} - B_2 \cos^2{\theta} \\
+    &= -B_2
+\end{align}

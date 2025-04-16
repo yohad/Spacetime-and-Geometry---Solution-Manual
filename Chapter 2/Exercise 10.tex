@@ -1,0 +1,51 @@
+\subsection{Exercise 10}
+
+
+We are using a two-dimensional space (one space and one time). In this space, the first Maxwell's equation becomes:
+\begin{align}
+    (\mathrm{d}F)_{\mu\nu\sigma} &= 3\partial_{[\mu}F_{\nu\sigma]} \\
+    &= \frac{3}{2} \left( \partial_\mu F_{\nu\sigma} - \partial_\mu F_{\sigma\nu}
+    +\partial_\sigma F_{\mu\nu} - \partial_\sigma F_{\nu\mu}
+    +\partial_\nu F_{\sigma\mu} - \partial_\nu F_{\mu\sigma} \right)
+\end{align}
+Every placement of values in the indices will result in $0$, for example
+\begin{align}
+    (\mathrm{d}F)_{001} &= \frac{3}{2} \left(
+      \partial_0 F_{01} - \partial_0 F_{10}
+    + \partial_1 F_{00} - \partial_1 F_{00}
+    + \partial_0 F_{10} - \partial_0 F_{01} \right) \\
+    &= 0
+\end{align}
+which means that we can disregard Maxwell's first equation.
+
+In Maxwell's second equation, $\mathrm{d}{*F}=*J$, we'll start with the current density. $J$ is a 1-form, so $*J$ is a 1-form as well.
+\begin{align}
+    (*J)_\mu &= \epsilon^\nu{_\mu}J_\nu \\
+    &= \epsilon^\nu{_\mu} g_{\nu\sigma}J^\sigma \\
+    &= \epsilon_{\sigma\mu} J^\sigma \\
+    &= \sqrt{g}\tilde{\epsilon}_{\sigma\mu}J^\sigma
+\end{align}
+In component form:
+\begin{align}
+    (*J)_0 &= \sqrt{g}\tilde{\epsilon}_{10} J^1 = -\sqrt{g} J^1 \\
+    (*J)_1 &= \sqrt{g}\tilde{\epsilon}_{01} J^1 = \sqrt{g} J^0
+\end{align}
+The left hand side can be written as:
+\begin{align}
+    (*F) &= \frac{1}{2} \epsilon^{\nu_1\nu_2} F_{\nu_1\nu_2} \\
+    &=\frac{1}{2} \epsilon^{\nu_1\nu_2} g_{\rho_1\nu_1} g_{\rho_2\nu_2} F^{\rho_1\rho_2} \\
+    &= \frac{1}{2} \epsilon_{\rho_1\rho_2}F^{\rho_1\rho_2} \\
+    &= \frac{\sqrt{g}}{2} \tilde{\epsilon}_{\rho_1\rho_2}F^{\rho_1\rho_2} \\
+    &= \frac{\sqrt{g}}{2} \left(F^{01}-F^{10}\right) \\
+    &= \sqrt{g} F^{01}
+\end{align}
+where we used the fact that $F^{01}=-F^{10}$. We can now find the exterior product:
+\begin{align}
+    (\mathrm{d}*F)_\mu &= \partial_\mu \sqrt{g}F^{01}
+\end{align}
+The dynamical field equations are then
+\begin{align}
+    \partial_0 F^{01} &= -J^1 \\
+    \partial_1 F^{01} &= J^0
+\end{align}
+
